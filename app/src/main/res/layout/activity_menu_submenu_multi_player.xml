@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/multi_player_submenu_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/multi_player_imageview"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="16dp"
+    android:visibility="gone">
+
+    <ImageButton
+        style="@style/My.Widget.MenuButton.Small"
+        android:layout_width="@dimen/menu_button_height_small"
+        android:layout_height="@dimen/menu_button_height_small"
+        android:clickable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_menu_single_player"/>
+
+</RelativeLayout>

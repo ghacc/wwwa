@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_btn_font_family">sans-serif-thin</string>
+    <string name="exit_btn_font_family">sans-serif-light</string>
+</resources>

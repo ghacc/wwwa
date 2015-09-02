@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">World Word Wars</string>
 
+    <string name="single_player">"One player"</string>
+    <string name="multi_player">"Two players"</string>
+    <string name="settings">"Settings</string>
+    <string name="exit_confirmation">"I hope you had fun. Bye!"</string>
+    <string name="leave_feedback">Leave feedback?</string>
+    <string name="cancel">"Cancel</string>
+    <string name="exit">"Exit"</string>
+    <string name="title_activity_exit_confirmation">Exit</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_game">World Word Wars</string>
 </resources>

@@ -1,11 +1,147 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MenuActivity">
+    tools:context=".MenuActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:animateLayoutChanges="true"
+        android:gravity="center_vertical">
+
+        <!-- Single player -->
+        <LinearLayout
+            android:id="@+id/single_player_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/single_player_imageview"
+                    android:layout_width="@dimen/menu_button_height"
+                    android:layout_height="@dimen/menu_button_height"
+                    android:clickable="false"
+                    android:src="@drawable/ic_menu_single_player"/>
+
+                <TextView
+                    android:id="@+id/single_player_textview"
+                    style="@style/My.Widget.MenuButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/menu_button_height"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:clickable="false"
+                    android:text="@string/single_player"
+                    />
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_toEndOf="@id/single_player_imageview"-->
+                <!--android:layout_toRightOf="@id/single_player_imageview"-->
+
+            </LinearLayout>
+
+
+            <include
+                layout="@layout/activity_menu_submenu_single_player"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <!-- Multi player -->
+        <LinearLayout
+            android:id="@+id/multi_player_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/single_player_layout"
+            android:layout_alignStart="@id/single_player_layout"
+            android:layout_below="@id/single_player_layout"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/multi_player_imageview"
+                    android:layout_width="@dimen/menu_button_height"
+                    android:layout_height="@dimen/menu_button_height"
+                    android:clickable="false"
+                    android:src="@drawable/ic_menu_single_player"/>
+
+                <TextView
+                    android:id="@+id/multi_player_textview"
+                    style="@style/My.Widget.MenuButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/menu_button_height"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:clickable="false"
+                    android:text="@string/multi_player"/>
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_toEndOf="@id/multi_player_imageview"-->
+                <!--android:layout_toRightOf="@id/multi_player_imageview"-->
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/activity_menu_submenu_multi_player"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/multi_player_submenu_layout"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:layout_alignLeft="@id/multi_player_textview"-->
+            <!--android:layout_alignStart="@id/multi_player_textview"-->
+            <!--android:layout_below="@id/multi_player_textview"-->
+            <!--android:visibility="gone">-->
+
+            <!--<ImageButton-->
+            <!--style="@style/My.Widget.WWW.MenuButton"-->
+            <!--android:layout_width="48dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:clickable="true"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:src="@drawable/ic_menu_single_player"-->
+            <!--android:stateListAnimator="@android:animator/fade_in"/>-->
+
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!-- Exit button -->
+    <ImageButton
+        android:id="@+id/exit_btn"
+        style="@style/My.Widget.MenuButton"
+        android:layout_width="@dimen/menu_button_height"
+        android:layout_height="@dimen/menu_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_menu_exit_x"/>
+
 
 </RelativeLayout>

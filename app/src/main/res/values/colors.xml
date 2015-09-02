@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_default">#ccffffff</color>
+    <color name="color_selected">#eeffffff</color>
+    <color name="color_pressed">#ffffffff</color>
+    <color name="color_background">#000000</color>
+    <color name="word_view_text_color">#ffffffff</color>
+</resources>

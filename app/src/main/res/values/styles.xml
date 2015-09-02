@@ -1,8 +1,51 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
-        <!-- Customize your theme here. -->
+    <style name="My"/>
+
+    <style name="My.Widget" parent="My"/>
+
+    <!-- TODO should i add a shadow?-->
+    <style name="My.Widget.MenuButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@color/color_background</item>
+        <item name="android:textAppearance">@style/My.TextAppearance.Button</item>
+        <item name="android:focusable">false</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="My.Widget.MenuButton.Small">
+        <item name="android:textAppearance">@style/My.TextAppearance.Button.Small</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <style name="My.Widget.TextViewDialog">
+        <item name="android:background">@color/color_background</item>
+        <item name="android:textAppearance">@style/My.TextAppearance.Button</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="My.Widget.MenuButton.ExitButton">
+        <item name="android:textSize">30sp</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:fontFamily">@string/exit_btn_font_family</item>
+    </style>
+
+    <style name="My.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@string/menu_btn_font_family</item>
+        <item name="android:textColor">@color/color_default</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="My.TextAppearance.Button">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:ellipsize">none</item>
+    </style>
+
+    <style name="My.TextAppearance.Button.Small">
+        <item name="android:textSize">@dimen/small_text_size</item>
     </style>
 
 </resources>
